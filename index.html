@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Saver</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>Character Creator</h1>
+      <div class="inputs-box">
+        <div class="input">
+          <label for="name">Name: </label>
+          <input id="name" type="text" />
+        </div>
+        <div class="input">
+          <label for="strength">Strength: </label>
+          <input id="strength" type="text" />
+        </div>
+        <div class="input">
+          <label for="dexterity">Dexterity: </label>
+          <input id="dexterity" type="text" />
+        </div>
+        <div class="input">
+          <label for="constitution">Constitution: </label>
+          <input id="constitution" type="text" />
+        </div>
+        <div class="input">
+          <label for="intelligence">Intelligence: </label>
+          <input id="intelligence" type="text" />
+        </div>
+        <div class="input">
+          <label for="wisdom">Wisdom: </label>
+          <input id="wisdom" type="text" />
+        </div>
+        <div class="input">
+          <button onclick="saveStats()">Save Character</button>
+          <button onclick="pushCharacters()">Refresh List</button>
+        </div>
+      </div>
+      <h2 id="character-count"></h2>
+      <div id="character-tiles-box"></div>
+    </div>
+  </body>
+</html>

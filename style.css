@@ -1,0 +1,50 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+body {
+  background-color: dimgray;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+}
+.main-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+.inputs-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.input input {
+  width: 2rem;
+  text-align: center;
+}
+#name {
+  width: 10rem;
+}
+
+#character-tiles-box {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.character-tile {
+  background-color: black;
+  color: white;
+  width: 30%;
+  padding: 1.5rem;
+}
