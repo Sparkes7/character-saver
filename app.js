@@ -20,7 +20,14 @@ function saveStats() {
   characterList.push(newCharacter);
   console.log(characterList);
   const charCount = document.getElementById("character-count");
-  charCount.textContent = `You have ${characterList.length} characters saved.`;
+  charCount.textContent = `Character Saved! You have ${characterList.length} characters saved.`;
+
+  nameInput.value = null;
+  strengthInput.value = null;
+  dexterityInput.value = null;
+  constitutionInput.value = null;
+  intelligenceInput.value = null;
+  wisdomInput.value = null;
 }
 
 function pushCharacters() {
