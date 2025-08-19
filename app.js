@@ -28,42 +28,40 @@ function saveStats() {
   constitutionInput.value = null;
   intelligenceInput.value = null;
   wisdomInput.value = null;
-}
 
-function pushCharacters() {
+  // ------------------- Refresh Listed Characters ------------------- //
   const charTilesBox = document.getElementById("character-tiles-box");
 
+  // returns the first child of charTilesBox, if there is no child, it returns null and is then falsey and stops running.
   while (charTilesBox.firstChild) {
+    // removes all of the content in the charTilesBox div - this is because we're going to repopulate it with the updated character list.
     charTilesBox.removeChild(charTilesBox.firstChild);
   }
 
+  // iterates through the character list
   for (character of characterList) {
+    // Create the div to add ALL the stat names and values in, and give it a class for styling.
+    // as there are more characters, there are more divs created
     const newDiv = document.createElement("div");
     newDiv.className = "character-tile";
-    newDiv.class;
-    const pName = document.createElement("p");
-    pName.textContent = `Name: ${character.name}`;
-    newDiv.appendChild(pName);
 
-    const pStrength = document.createElement("p");
-    pStrength.textContent = `Str: ${character.strength}`;
-    newDiv.appendChild(pStrength);
+    //puts the keys and values of the character into arrays saved as 'stats' and 'values' so that we can iterate through it.
+    const stats = Object.keys(character);
+    const values = Object.values(character);
 
-    const pDexterity = document.createElement("p");
-    pDexterity.textContent = `Dex: ${character.dexterity}`;
-    newDiv.appendChild(pDexterity);
+    for (i = 0; i < stats.length; i++) {
+      const statDiv = document.createElement("div");
+      statDiv.className = "flex-row";
+      const newStatText = document.createElement("p");
+      const newValueText = document.createElement("p");
 
-    const pConstitution = document.createElement("p");
-    pConstitution.textContent = `Con: ${character.constitution}`;
-    newDiv.appendChild(pConstitution);
+      newStatText.textContent = stats[i];
+      newValueText.textContent = values[i];
+      statDiv.appendChild(newStatText);
+      statDiv.appendChild(newValueText);
+      newDiv.appendChild(statDiv);
+    }
 
-    const pIntelligence = document.createElement("p");
-    pIntelligence.textContent = `Int: ${character.intelligence}`;
-    newDiv.appendChild(pIntelligence);
-
-    const pWisdom = document.createElement("p");
-    pWisdom.textContent = `Wis: ${character.wisdom}`;
-    newDiv.appendChild(pWisdom);
     charTilesBox.appendChild(newDiv);
   }
 }
