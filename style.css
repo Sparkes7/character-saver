@@ -59,18 +59,23 @@ h1 {
 
 .flex-row p {
   width: 50%;
+  font-size: 1rem;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   #character-tiles-box {
+    font-size: 0.8rem;
     margin-top: 2rem;
     display: flex;
-    flex-direction: column;
   }
   .character-tile {
     background-color: black;
     color: white;
-    width: 100%;
+    width: 48%;
     padding: 1.5rem;
+  }
+  .flex-row p {
+    width: 50%;
+    font-size: 0.75rem;
   }
 }
